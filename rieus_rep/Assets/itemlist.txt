@@ -1,0 +1,49 @@
+--------------------------------------------------------------
+------------ QB Core
+gangrep1 = { 
+    name = 'gangrep1', 
+    label = 'Reputation Card LVL 1', 
+    weight = 1, 
+    type = 'item', 
+    image = 'gangrep1.png',
+    unique = true, 
+    useable = false, 
+    shouldClose = true, 
+    combinable = nil, 
+    description = 'Reputation Card Gives You 1000 REP'
+},
+gangrep2 = { 
+    name = 'gangrep2', 
+    label = 'Reputation Card LVL 2', 
+    weight = 1, 
+    type = 'item', 
+    image = 'gangrep2.png',
+    unique = true, 
+    useable = false, 
+    shouldClose = true, 
+    combinable = nil, 
+    description = 'Reputation Card Gives You 5000 REP'
+},
+gangrep3 = { 
+    name = 'gangrep3', 
+    label = 'Reputation Card LVL 3', 
+    weight = 1, 
+    type = 'item', 
+    image = 'gangrep3.png',
+    unique = true, 
+    useable = false, 
+    shouldClose = true, 
+    combinable = nil, 
+    description = 'Reputation Card Gives You 10000 REP'
+}
+
+
+
+
+--------------------------------------------------------------
+------------ ESX
+
+
+INSERT INTO items (name, label, weight, rare, can_remove) VALUES ('gangrep1', 'Reputation Card LVL 1', 1, 0, 1);
+INSERT INTO items (name, label, weight, rare, can_remove) VALUES ('gangrep2', 'Reputation Card LVL 2', 1, 0, 1);
+INSERT INTO items (name, label, weight, rare, can_remove) VALUES ('gangrep3', 'Reputation Card LVL 3', 1, 0, 1);

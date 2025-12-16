@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reputation Card Dealer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../style/main.css">
+</head>
+<body>
+    <div id="app" class="app-container hidden">
+        <!-- Background Blur -->
+        <div class="blur-bg"></div>
+
+        <!-- Main Panel -->
+        <div class="main-panel">
+            <!-- Header -->
+            <div class="header-section">
+                <div class="header-top">
+                    <div class="title-group">
+                        <h1 class="main-title">Reputation Center</h1>
+                        <p class="subtitle">Give Cards To Make Your Gang Reputation Grow</p>
+                    </div>
+                </div>
+                <div class="header-divider"></div>
+            </div>
+
+            <!-- Content Section -->
+            <div class="content-section">
+                <!-- Stats Bar -->
+                <div class="stats-bar">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-bookmark"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-label">Available</span>
+                            <span class="stat-value" id="statsAvailable">0</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-label">Total Rep</span>
+                            <span class="stat-value" id="statsTotalRep">0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cards Section -->
+                <div class="cards-container">
+                    <div class="cards-header">
+                        <h2 class="section-title">Your Cards</h2>
+                        <span class="badge-count" id="badgeCount">0</span>
+                    </div>
+
+                    <div class="cards-grid" id="cardsGrid"></div>
+
+                    <!-- Empty State -->
+                    <div class="empty-state" id="emptyState">
+                        <div class="empty-icon">
+                            <i class="fas fa-inbox"></i>
+                        </div>
+                        <p class="empty-text">No cards available</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Selected Card Preview -->
+            <div class="selected-preview" id="selectedPreview">
+                <div class="preview-content">
+                    <div class="preview-left">
+                        <div class="preview-icon" id="previewIcon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                    </div>
+                    <div class="preview-right">
+                        <p class="preview-label">Selected Card</p>
+                        <h3 class="preview-title" id="previewTitle"></h3>
+                        <div class="preview-rep">
+                            <span class="rep-badge" id="previewRep"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button class="btn-cancel" onclick="cancelGive()">
+                    <i class="fas fa-times-circle"></i>
+                    <span>Cancel</span>
+                </button>
+                <button class="btn-confirm" id="btnConfirm" onclick="giveCard()">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Confirm Deal</span>
+                </button>
+            </div>
+
+            <!-- Loading State -->
+            <div class="loading-overlay" id="loadingOverlay">
+                <div class="loader">
+                    <div class="spinner"></div>
+                    <p>Processing...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../scripts/ui.js"></script>
+</body>
+</html>
